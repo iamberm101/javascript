@@ -10,13 +10,19 @@ function maxChar(str){
         }
     }
 
+    // for(const [key,value] of Object.entries(charMap)){
+    //    if(value > max){
+    //     max=value;
+    //     maxChar = key;
+    //    }
+    // }
 
-
-    for(const [key,value] of Object.entries(charMap)){
-       if(value > max){
-        max=value;
-        maxChar = key;
-       }
+    for(let key in charMap){
+        if(charMap[key] > max)
+        {
+            max = charMap[key];
+            maxChar = key;
+        }
     }
 
     return maxChar;
